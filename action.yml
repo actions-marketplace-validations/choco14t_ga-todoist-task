@@ -1,0 +1,18 @@
+name: 'Create a new task'
+description: 'Create a new task from opened issue.'
+author: 'choco14t <chocoh14t@gmail.com>'
+inputs:
+  token:
+    description: 'Todoist API token'
+    required: true
+    default: null
+  project-name:
+    description: 'Todoist project name which creating task'
+    required: false
+    default: 'Inbox'
+outputs:
+  message:
+    description: 'Response from Todoist'
+runs:
+  using: 'node12'
+  main: 'dist/index.js'

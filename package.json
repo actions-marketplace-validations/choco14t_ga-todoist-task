@@ -1,0 +1,16 @@
+{
+  "name": "ga-todoist-task",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:choco14t/ga-todoist-task.git",
+  "author": "choco <chocoh14t@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "build": "ncc build index.js --license license.txt"
+  },
+  "dependencies": {
+    "@actions/core": "^1.2.6",
+    "@actions/github": "^4.0.0",
+    "axios": "^0.21.0"
+  }
+}

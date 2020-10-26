@@ -39,6 +39,8 @@ const run = async () => {
 
     const projectName = core.getInput('project-name');
 
+    core.debug(`project-name: ${projectName}`);
+
     const projectId = await fetchProjectIdFromName(projectName);
 
     const { issue } = context.payload;

@@ -37,11 +37,13 @@ const run = async () => {
       throw new Error('Supported event issues only.');
     }
 
-    const id = await fetchProjectIdFromName(core.getInput('project-name'));
+    const projectName = core.getInput('project-name');
+
+    const projectId = await fetchProjectIdFromName(projectName);
 
     const { issue } = context.payload;
     const content = `#${issue.number} ${issue.title}`;
-    const task = await createTask({ content, id });
+    const task = await createTask({ content, projectId });
 
     core.setOutput('message', JSON.stringify(task, null, 2));
   } catch (error) {
